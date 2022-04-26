@@ -7,6 +7,10 @@ import { LocationComponent } from './views/location/location.component';
 import { PopulationComponent } from './views/population/population.component';
 import { OtherDataComponent } from './views/other-data/other-data.component';
 import { MenuComponent } from './views/menu/menu.component';
+import { HttpClientModule } from '@angular/common/http';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -19,7 +23,10 @@ import { MenuComponent } from './views/menu/menu.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

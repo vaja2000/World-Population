@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommunicationService } from 'src/app/services/communication.service';
 
 @Component({
   selector: 'app-location',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LocationComponent implements OnInit {
 
-  constructor() { }
+  constructor(private comunication:CommunicationService) { }
 
   ngOnInit(): void {
+    this.comunication.param.emit('all')
   }
 
 }
