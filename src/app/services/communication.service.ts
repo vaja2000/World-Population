@@ -5,7 +5,9 @@ import { Injectable, EventEmitter } from '@angular/core';
 })
 export class CommunicationService {
 
-  param:EventEmitter<any> = new EventEmitter()
+  population:EventEmitter<any> = new EventEmitter()
+  name:EventEmitter<string> = new EventEmitter()
+  back:EventEmitter<boolean> = new EventEmitter()
 
   constructor() { }
 }

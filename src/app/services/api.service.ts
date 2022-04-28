@@ -10,7 +10,8 @@ export class ApiService {
 
   constructor(private http:HttpClient) { }
   
-  getAllCountries(address:any) {
+  getAllCountries() {
     return this.http.get(`${this.api}/all`)
   }
+
 }

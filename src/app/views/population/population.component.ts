@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from 'src/app/services/api.service';
 import { CommunicationService } from 'src/app/services/communication.service';
 
 @Component({
@@ -9,24 +8,22 @@ import { CommunicationService } from 'src/app/services/communication.service';
 })
 export class PopulationComponent implements OnInit {
 
-  worldPopulation:any = 0
-  params:any
+  populationCount:any = 0
+  spinner:boolean = true
+  name:string = ""
 
   constructor(
-    private api:ApiService,
     private comunication:CommunicationService
     ) { }
 
   ngOnInit(): void {
-    this.comunication.param.subscribe(resp => {
-      this.params = resp
-      console.log(typeof this.params)
+    this.comunication.population.subscribe(resp => {
+      this.populationCount = resp
+      this.populationCount = this.populationCount.toLocaleString()
+      this.spinner = false
     })
-    this.api.getAllCountries(this.params).subscribe((Response:any) => {
-      Response.forEach((element:any) => {
-        this.worldPopulation += element.population
-      });
-      this.worldPopulation = this.worldPopulation.toLocaleString()
+    this.comunication.name.subscribe(resp => {
+      this.name = resp
     })
   }
 

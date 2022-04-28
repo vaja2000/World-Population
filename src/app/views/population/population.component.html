@@ -1,4 +1,8 @@
 <h2>მოსახლეობის რაოდენობა</h2>
-<h4>მსოფლიო მოსახლეობის რაოდენობა</h4>
+<h4>{{name}} მოსახლეობის რაოდენობა</h4>
 <mat-icon>group</mat-icon>
-<h1>{{worldPopulation}}</h1>
+<mat-spinner
+*ngIf="spinner; else active"></mat-spinner>
+<ng-template #active>
+    <h1>{{populationCount}}</h1>
+</ng-template>

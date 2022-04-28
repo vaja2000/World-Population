@@ -8,9 +8,19 @@ import { PopulationComponent } from './views/population/population.component';
 import { OtherDataComponent } from './views/other-data/other-data.component';
 import { MenuComponent } from './views/menu/menu.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MatButtonModule } from '@angular/material/button';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
+import { RegionComponent } from './views/location/region/region.component';
+import { AfricaComponent } from './views/location/africa/africa.component';
+import { EuropeComponent } from './views/location/europe/europe.component';
+import { AsiaComponent } from './views/location/asia/asia.component';
+import { AustraliaComponent } from './views/location/australia/australia.component';
+import { SouthAmericaComponent } from './views/location/south-america/south-america.component';
+import { NorthAmericaComponent } from './views/location/north-america/north-america.component';
+import { AntarcticaComponent } from './views/location/antarctica/antarctica.component';
 
 
 @NgModule({
@@ -19,14 +29,24 @@ import { MatIconModule } from '@angular/material/icon';
     LocationComponent,
     PopulationComponent,
     OtherDataComponent,
-    MenuComponent
+    MenuComponent,
+    RegionComponent,
+    AfricaComponent,
+    EuropeComponent,
+    AsiaComponent,
+    AustraliaComponent,
+    SouthAmericaComponent,
+    NorthAmericaComponent,
+    AntarcticaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    MatButtonModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

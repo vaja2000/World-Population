@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from 'src/app/services/api.service';
 import { CommunicationService } from 'src/app/services/communication.service';
 
 @Component({
@@ -8,10 +9,18 @@ import { CommunicationService } from 'src/app/services/communication.service';
 })
 export class LocationComponent implements OnInit {
 
-  constructor(private comunication:CommunicationService) { }
+  worldPopulation:any = 0
+  backBtn:boolean = false
+
+  constructor(private communication:CommunicationService) { }
 
   ngOnInit(): void {
-    this.comunication.param.emit('all')
+    this.communication.back.subscribe(resp => {
+      this.backBtn = resp
+    })
+  }
+  exitBtn() {
+    this.communication.back.emit(false)
   }
 
 }

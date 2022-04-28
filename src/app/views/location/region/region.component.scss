@@ -1,0 +1,44 @@
+.continents {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 10px;
+    // height: 320px;
+    height: 79%;
+    section {
+        width: 20%;
+        height: 50%;
+        box-shadow: 0px 2px 8px #cccccc;
+        border-radius: 7px;
+        cursor: pointer;
+        margin: 5px;
+        background-size: cover;
+        transition: .3s;
+        &:hover {
+            transform: scale(1.1);
+        }
+        div {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            border-radius: 7px;
+            transition: .3s linear;
+            color: #FFF;
+            &:hover {
+                opacity: 1;
+                background-color: rgb(0, 0, 51, 0.2);
+            }
+        }
+    }
+    .africa {background-image: url(../../../../assets/africa.png);}
+    .australia {background-image: url(../../../../assets/australia.png);}
+    .europe {background-image: url(../../../../assets/europe.png);}
+    .asia {background-image: url(../../../../assets/asia.png);}
+    .south_america {background-image: url(../../../../assets/south-america.png);}
+    .north_america {background-image: url(../../../../assets/north-america.png);}
+    .antarctica {background-image: url(../../../../assets/Antarctica.webp);}
+}

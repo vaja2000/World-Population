@@ -1,38 +1,9 @@
 <h2>კონტინენტები</h2>
-<div class="continents">
-    <section class="africa">
-        <div>
-            <h4>აფრიკა</h4>
-        </div>
-    </section>
-    <section class="australia">
-        <div>
-            <h4>ავსტრალია</h4>
-        </div>
-    </section>
-    <section class="europe">
-        <div>
-            <h4>ევროპა</h4>
-        </div>
-    </section>
-    <section class="asia">
-        <div>
-            <h4>აზია</h4>
-        </div>
-    </section>
-    <section class="south_america">
-        <div>
-            <h4>სამ: ამერიკა</h4>
-        </div>
-    </section>
-    <section class="north_america">
-        <div>
-            <h4>ჩრდ: ამერიკა</h4>
-        </div>
-    </section>
-    <section class="antarctica">
-        <div>
-            <h4>ანტარქტიდა</h4>
-        </div>
-    </section>
-</div>
+<button mat-raised-button color="primary"
+*ngIf="backBtn"
+(click)="exitBtn()"
+routerLink="/">
+    <mat-icon class="mat-18">arrow_back</mat-icon>
+    გასვლა
+</button>
+<router-outlet></router-outlet>
