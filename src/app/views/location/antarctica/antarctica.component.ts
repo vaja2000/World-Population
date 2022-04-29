@@ -23,6 +23,7 @@ export class AntarcticaComponent implements OnInit {
       });
       this.communication.population.emit(this.populationCount)
       this.communication.name.emit("ანტარქტიდის")
+      this.communication.continentsTitle.emit("ანტარქტიდა")
       this.communication.back.emit(true)
     })
   }

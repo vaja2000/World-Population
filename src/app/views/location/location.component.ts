@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from 'src/app/services/api.service';
 import { CommunicationService } from 'src/app/services/communication.service';
 
 @Component({
@@ -11,12 +10,16 @@ export class LocationComponent implements OnInit {
 
   worldPopulation:any = 0
   backBtn:boolean = false
+  continentsName:string = "კონტინენტები"
 
   constructor(private communication:CommunicationService) { }
 
   ngOnInit(): void {
     this.communication.back.subscribe(resp => {
       this.backBtn = resp
+    })
+    this.communication.continentsTitle.subscribe(resp => {
+      this.continentsName = resp
     })
   }
   exitBtn() {

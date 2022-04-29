@@ -1,0 +1,40 @@
+h2 {
+    text-align: center;
+}
+.first_SEC {
+    text-align: center;
+    h2,h1 {
+        margin-bottom: 5px;
+        color: #e60000;
+    }
+    section {
+        display: flex;
+        justify-content: space-around;
+        h5 {
+            margin-bottom: 5px;
+            color: #0080ff;
+        }
+        .flag {
+            width: 130px;
+            height: 85px;
+            object-fit: cover;
+        }
+        .coatOfArm {
+            width: 97px;
+            height: 85px;
+            object-fit: cover;
+        }
+    }
+}
+.second_SEC {
+    box-sizing: border-box;
+    padding: 10px 8px;
+    h3 {
+        margin-bottom: 3px;
+        color: #000033;
+    }
+    strong {
+        color: #800000;
+        margin-left: 10px;
+    }
+}

@@ -23,6 +23,7 @@ export class EuropeComponent implements OnInit {
       });
       this.communication.population.emit(this.populationCount)
       this.communication.name.emit("ევროპის")
+      this.communication.continentsTitle.emit("ევროპა")
       this.communication.back.emit(true)
     })
   }

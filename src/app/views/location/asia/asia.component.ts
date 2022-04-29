@@ -23,6 +23,7 @@ export class AsiaComponent implements OnInit {
       });
       this.communication.population.emit(this.populationCount)
       this.communication.name.emit("აზიის")
+      this.communication.continentsTitle.emit("აზია")
       this.communication.back.emit(true)
     })
   }

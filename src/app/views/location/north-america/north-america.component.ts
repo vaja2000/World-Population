@@ -23,6 +23,7 @@ export class NorthAmericaComponent implements OnInit {
       });
       this.communication.population.emit(this.populationCount)
       this.communication.name.emit("ჩრდ: ამერიკის")
+      this.communication.continentsTitle.emit("ჩრდილოეთ ამერიკა")
       this.communication.back.emit(true)
     })
   }

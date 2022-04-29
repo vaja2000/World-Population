@@ -20,9 +20,11 @@ export class RegionComponent implements OnInit {
     this.api.getAllCountries().subscribe((Response:any) => {
       Response.forEach((element:any) => {
         this.worldPopulation += element.population
+        console.log(element)
       });
       this.communication.population.emit(this.worldPopulation)
       this.communication.name.emit("მსოფლიო")
+      this.communication.continentsTitle.emit("კონტინენტები")
     })
   }
 

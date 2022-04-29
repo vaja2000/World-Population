@@ -23,6 +23,7 @@ export class SouthAmericaComponent implements OnInit {
       });
       this.communication.population.emit(this.populationCount)
       this.communication.name.emit("სამ: ამერიკის")
+      this.communication.continentsTitle.emit("სამხრეთ ამერიკა")
       this.communication.back.emit(true)
     })
   }

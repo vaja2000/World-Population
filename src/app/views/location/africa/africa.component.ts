@@ -23,6 +23,7 @@ export class AfricaComponent implements OnInit {
       });
       this.communication.population.emit(this.populationCount)
       this.communication.name.emit("აფრიკის")
+      this.communication.continentsTitle.emit("აფრიკა")
       this.communication.back.emit(true)
     })
   }

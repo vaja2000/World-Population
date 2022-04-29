@@ -23,6 +23,7 @@ export class AustraliaComponent implements OnInit {
       });
       this.communication.population.emit(this.populationCount)
       this.communication.name.emit("ავსტრალიის")
+      this.communication.continentsTitle.emit("ავსტრალია")
       this.communication.back.emit(true)
     })
   }
