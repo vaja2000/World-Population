@@ -25,6 +25,7 @@ export class AntarcticaComponent implements OnInit {
       this.communication.name.emit("ანტარქტიდის")
       this.communication.continentsTitle.emit("ანტარქტიდა")
       this.communication.back.emit(true)
+      this.communication.continentDefaultName.emit("Antarctica")
     })
   }
 

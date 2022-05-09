@@ -13,5 +13,5 @@ export class ApiService {
   getAllCountries() {
     return this.http.get(`${this.api}/all`)
   }
-
+  
 }

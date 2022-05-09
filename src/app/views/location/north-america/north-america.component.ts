@@ -25,6 +25,7 @@ export class NorthAmericaComponent implements OnInit {
       this.communication.name.emit("ჩრდ: ამერიკის")
       this.communication.continentsTitle.emit("ჩრდილოეთ ამერიკა")
       this.communication.back.emit(true)
+      this.communication.continentDefaultName.emit("North America")
     })
   }
 }

@@ -10,6 +10,7 @@ import { MenuComponent } from './views/menu/menu.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSelectModule } from '@angular/material/select';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
@@ -46,7 +47,8 @@ import { AntarcticaComponent } from './views/location/antarctica/antarctica.comp
     BrowserAnimationsModule,
     MatIconModule,
     MatButtonModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

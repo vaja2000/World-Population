@@ -1,1 +1,17 @@
-<span>მენიუ</span>
+<h2>მენიუ</h2>
+<div class="container">
+    <section class="flag">
+        <img src="" alt="">
+    </section>
+    <section class="country">
+        <mat-form-field appearance="fill">
+            <mat-label>{{country}} ქვეყნები</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let country of allCountries"
+                (value)="country">
+                {{country}}
+                </mat-option>
+            </mat-select>
+          </mat-form-field>
+    </section>
+</div>

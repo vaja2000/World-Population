@@ -25,6 +25,7 @@ export class AfricaComponent implements OnInit {
       this.communication.name.emit("აფრიკის")
       this.communication.continentsTitle.emit("აფრიკა")
       this.communication.back.emit(true)
+      this.communication.continentDefaultName.emit("Africa")
     })
   }
 
