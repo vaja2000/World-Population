@@ -9,6 +9,7 @@ export class CommunicationService {
   back:EventEmitter<boolean> = new EventEmitter()
   continentsTitle:EventEmitter<string> = new EventEmitter()
   continentDefaultName:EventEmitter<string> = new EventEmitter()
+  country:EventEmitter<string> = new EventEmitter()
 
   constructor() { }
 }

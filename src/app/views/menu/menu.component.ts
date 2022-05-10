@@ -10,6 +10,8 @@ import { CommunicationService } from 'src/app/services/communication.service';
 export class MenuComponent implements OnInit {
   country:any
   allCountries:string[] = []
+  chooseCountry:any = ""
+
 
   constructor(
     private communication:CommunicationService,
@@ -22,11 +24,10 @@ export class MenuComponent implements OnInit {
       this.api.getAllCountries().subscribe((resp:any) => {
         resp.forEach((element:any) => {
           if(element.continents[0] === Response)
-            if(element.altSpellings[1] != undefined)
+            if(element.altSpellings[1] != undefined && element.altSpellings[1].length > 2)
             this.allCountries.push(element.altSpellings[1])
-        });
+        }); 
       })
-      console.log(this.allCountries)
     })
     this.communication.name.subscribe(resp => {
       if(resp === "მსოფლიო")
@@ -35,5 +36,9 @@ export class MenuComponent implements OnInit {
       this.country = resp
     })
   }
-
+  submit() {
+    this.communication.country.emit(this.chooseCountry)
+    this.communication.name.emit(`${this.chooseCountry}-ის`)
+    this.chooseCountry = ""
+  }
 }

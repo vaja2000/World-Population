@@ -1,17 +1,19 @@
-<h2>მენიუ</h2>
+<h2>აირჩიე ქალაქი</h2>
 <div class="container">
-    <section class="flag">
-        <img src="" alt="">
-    </section>
     <section class="country">
         <mat-form-field appearance="fill">
             <mat-label>{{country}} ქვეყნები</mat-label>
-            <mat-select>
+            <mat-select [(ngModel)]="chooseCountry">
                 <mat-option *ngFor="let country of allCountries"
-                (value)="country">
+                [value]="country">
                 {{country}}
                 </mat-option>
             </mat-select>
           </mat-form-field>
+          <button mat-raised-button color="warn"
+          type="submit"
+          (click)="submit()"
+          [disabled]="chooseCountry.length < 1"
+          >ძიება</button>
     </section>
 </div>

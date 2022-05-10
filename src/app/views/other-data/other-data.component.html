@@ -1,21 +1,34 @@
 <h2>დეტალური ინფორმაცია</h2>
-<div class="first_SEC">
-    <h1>GE</h1>
-    <h2>Sakartvelo</h2>
-    <section>
-        <div>
-            <h5>დროშა</h5>
-            <img class="flag" src="https://flagcdn.com/w320/ge.png" alt="">
-        </div>
-        <div>
-            <h5>გერბი</h5>
-            <img class="coatOfArm" src="https://mainfacts.com/media/images/coats_of_arms/ge.png" alt="">
-        </div>
-    </section>
-</div>
-<div class="second_SEC">
-    <h3>დედაქალაქი:<strong>Tbilisi</strong></h3>
-    <h3>ენა:<strong>Georgian</strong></h3>
-    <h3>ვალუტა:<strong>lari</strong><strong>₾</strong></h3>
-    <h3>ფართობი:<strong>69,700კმ²</strong></h3>
+<div class="container" *ngIf="choosedCountry != null">
+    <div class="first_SEC">
+        <h1>{{choosedCountry.altSpellings[0]}}</h1>
+        <h2>{{choosedCountry.altSpellings[1]}}</h2>
+        <section>
+            <div>
+                <h5>დროშა</h5>
+                <img class="flag" [src]="choosedCountry.flags.png" alt="">
+            </div>
+            <div>
+                <h5>გერბი</h5>
+                <img class="coatOfArm" [src]="choosedCountry.coatOfArms.png" alt="">
+            </div>
+        </section>
+    </div>
+    <div class="second_SEC">
+        <h3>დედაქალაქი:<strong>{{choosedCountry.capital}}</strong></h3>
+        <h3>ენა:
+            <strong *ngFor="let lang of languages">
+                {{lang}}
+            </strong>
+        </h3>
+        <h3>ვალუტა:
+            <strong *ngFor="let curr of currencies">
+                {{curr}}
+            </strong>
+            <strong *ngFor="let symbol of currenciesSymbols">
+                {{symbol}}
+            </strong>
+        </h3>
+        <h3>ფართობი:<strong>{{countryArea}}კმ²</strong></h3>
+    </div>
 </div>

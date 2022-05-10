@@ -13,5 +13,7 @@ export class ApiService {
   getAllCountries() {
     return this.http.get(`${this.api}/all`)
   }
-  
+  getCountry(country:string) {
+    return this.http.get(`${this.api}/name/${country}`)
+  }
 }

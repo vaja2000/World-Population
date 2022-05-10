@@ -24,6 +24,7 @@ export class LocationComponent implements OnInit {
   }
   exitBtn() {
     this.communication.back.emit(false)
+    this.communication.continentDefaultName.emit("")
   }
 
 }
