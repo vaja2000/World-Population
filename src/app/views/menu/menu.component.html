@@ -1,5 +1,9 @@
 <h2>აირჩიე ქალაქი</h2>
 <div class="container">
+    <section class="flag">
+        <img *ngIf="flag != null"
+        [src]="flag" alt="">
+    </section>
     <section class="country">
         <mat-form-field appearance="fill">
             <mat-label>{{country}} ქვეყნები</mat-label>
@@ -15,5 +19,9 @@
           (click)="submit()"
           [disabled]="chooseCountry.length < 1"
           >ძიება</button>
+    </section>
+    <section class="coatOfArm">
+        <img *ngIf="coatOfArm != null"
+        [src]="coatOfArm" alt="">
     </section>
 </div>

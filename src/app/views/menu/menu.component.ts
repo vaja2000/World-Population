@@ -11,6 +11,8 @@ export class MenuComponent implements OnInit {
   country:any
   allCountries:string[] = []
   chooseCountry:any = ""
+  flag:any = null
+  coatOfArm:any = null
 
 
   constructor(
@@ -39,6 +41,14 @@ export class MenuComponent implements OnInit {
   submit() {
     this.communication.country.emit(this.chooseCountry)
     this.communication.name.emit(`${this.chooseCountry}-ის`)
+    this.api.getCountry(this.chooseCountry).subscribe((reponse:any) => {
+      reponse.forEach((element:any) => {
+        this.flag = element.flags.png
+        this.coatOfArm = element.coatOfArms.png
+        this.communication.lat.emit(element.latlng[0])
+        this.communication.lon.emit(element.latlng[1])
+      });
+    }) 
     this.chooseCountry = ""
   }
 }

@@ -12,6 +12,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
+import { AgmCoreModule } from '@agm/core';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
@@ -23,6 +24,7 @@ import { AustraliaComponent } from './views/location/australia/australia.compone
 import { SouthAmericaComponent } from './views/location/south-america/south-america.component';
 import { NorthAmericaComponent } from './views/location/north-america/north-america.component';
 import { AntarcticaComponent } from './views/location/antarctica/antarctica.component';
+import { MapComponent } from './views/location/map/map.component';
 
 
 @NgModule({
@@ -39,7 +41,8 @@ import { AntarcticaComponent } from './views/location/antarctica/antarctica.comp
     AustraliaComponent,
     SouthAmericaComponent,
     NorthAmericaComponent,
-    AntarcticaComponent
+    AntarcticaComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +53,10 @@ import { AntarcticaComponent } from './views/location/antarctica/antarctica.comp
     MatButtonModule,
     MatProgressSpinnerModule,
     MatSelectModule,
-    FormsModule
+    FormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyB3VhysmarwVEgVOOAbuMmVQ8Yivm2QPAQ'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

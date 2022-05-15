@@ -10,6 +10,8 @@ export class CommunicationService {
   continentsTitle:EventEmitter<string> = new EventEmitter()
   continentDefaultName:EventEmitter<string> = new EventEmitter()
   country:EventEmitter<string> = new EventEmitter()
+  lat:EventEmitter<number> = new EventEmitter()
+  lon:EventEmitter<number> = new EventEmitter()
 
   constructor() { }
 }

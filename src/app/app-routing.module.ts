@@ -11,13 +11,13 @@ import { SouthAmericaComponent } from './views/location/south-america/south-amer
 
 const routes: Routes = [
   { path: '', component:RegionComponent },
-  { path: 'africa', component:AfricaComponent },
-  { path: 'asia', component:AsiaComponent },
-  { path: 'australia', component:AustraliaComponent },
-  { path: 'antarctica', component:AntarcticaComponent },
-  { path: 'north-america', component:NorthAmericaComponent },
-  { path: 'south-america', component:SouthAmericaComponent },
-  { path: 'europe', component:EuropeComponent }
+  { path: 'africa/:lat/:long', component:AfricaComponent },
+  { path: 'asia/:lat/:long', component:AsiaComponent },
+  { path: 'australia/:lat/:long', component:AustraliaComponent },
+  { path: 'antarctica/:lat/:long', component:AntarcticaComponent },
+  { path: 'north-america/:lat/:long', component:NorthAmericaComponent },
+  { path: 'south-america/:lat/:long', component:SouthAmericaComponent },
+  { path: 'europe/:lat/:long', component:EuropeComponent }
 ];
 
 @NgModule({

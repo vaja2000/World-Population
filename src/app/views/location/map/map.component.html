@@ -1,0 +1,12 @@
+<div>
+    <section>
+        <button mat-mini-fab color="warn" aria-label="Example icon button with a filter list icon"
+        (click)="exitBtn()"
+        routerLink="/">
+            <mat-icon class="mat-18">arrow_back</mat-icon>
+        </button>
+    </section>
+    <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
+        <agm-marker [latitude]="markLatitude" [longitude]="markLongitude"></agm-marker>
+    </agm-map>
+</div>
